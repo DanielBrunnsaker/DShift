@@ -3,7 +3,7 @@
 Untargeted metabolomics for functional discovery of regulatory genes in the context of the diauxic shift.
 This repository contains code and intermediate data to be able to recreate the work.
 
-Last update: 2022-04-14
+Last update: 2022-08-30
 
 ## Project information
 
