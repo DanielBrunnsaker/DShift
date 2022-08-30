@@ -17,7 +17,7 @@ Simulations done to select the strains of interest was made using the framework 
 
 Analysis makes use of the output provided by MSDial (v4.7) as a basis for processing and analysis. The scripts should be ran in the following order:
 
-processing_step1.R
-processing_step2.R
-processing_step3.R
-processing_MAnalyst.R
+1. processing_step1.R
+2. processing_step2.R
+3. processing_step3.R
+4. processing_MAnalyst.R
