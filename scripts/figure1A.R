@@ -16,8 +16,8 @@ strains = c('WildType','YEL071W','YGR044C','YGR067C','YGR161C','YMR291W',
             'YNL099C','YNL289W','YOL051W','YOR317W','YOR351C')
 
 #load data
-ftq_e = read.csv('../data/metabolomics/ftq_ethanol.csv', row.names = 1)
-ftq_g = read.csv('../data/metabolomics/ftq_glucose.csv', row.names = 1)
+ftq_e = read.csv('../data/metabolomics/ft_ethanol.csv', row.names = 1)
+ftq_g = read.csv('../data/metabolomics/ft_glucose.csv', row.names = 1)
 
 to_remove = c('243.05', '132.10147','156.07756','160.0429',
               '160.04425','160.04459','136.06218','136.06087',
