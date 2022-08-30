@@ -9,7 +9,7 @@ cur_dir = dirname(getSourceEditorContext()$path)
 setwd(cur_dir)
 getwd()
 
-source("supp/figure2C_supp.R")
+source("supp/supp.R")
 
 #load the csvs
 strains_sims = c('WildType', 'YGR067C','YMR291W','YGR044C','YOR317W','YOL051W',

@@ -10,7 +10,7 @@ cur_dir = dirname(getSourceEditorContext()$path)
 setwd(cur_dir)
 getwd()
 
-source("supp/figure2C_supp.R")
+source("supp/supp.R")
 
 strains = c('WildType','YEL071W','YGR044C','YGR067C','YGR161C','YMR291W',
             'YNL099C','YNL289W','YOL051W','YOR317W','YOR351C')

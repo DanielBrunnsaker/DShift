@@ -10,7 +10,7 @@ cur_dir = dirname(getSourceEditorContext()$path)
 setwd(cur_dir)
 getwd()
 
-source("supp/figure2C_supp.R")
+source("supp/supp.R")
 
 graph <- buildGraphFromKEGGREST(organism = "sce")
 tmpdir <- paste0(tempdir(), "/my_database")

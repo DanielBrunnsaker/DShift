@@ -10,7 +10,7 @@ cur_dir = dirname(getSourceEditorContext()$path)
 setwd(cur_dir)
 getwd()
 
-source("supp/figure2C_supp.R")
+source("supp/supp.R")
 
 graph <- buildGraphFromKEGGREST(organism = "sce")
 tmpdir <- paste0(tempdir(), "/my_database")
@@ -48,7 +48,7 @@ mdat = read.csv('../results/strain/ethanol/TDA1.csv')
 
 to_remove = c('243.05', '132.10147','156.07756','160.0429',
               '160.04425','160.04459','136.06218','136.06087',
-              '296.06558','376.13256','396.1585','250.17918')
+              '296.06558','376.1325','396.1585','250.17918')
 mdat = remove_unwanted_features(mdat, to_remove)
 mdat$inchikey = NA
 mdat$KEGG = NA

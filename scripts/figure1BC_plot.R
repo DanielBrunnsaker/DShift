@@ -3,7 +3,6 @@ library(readxl)
 library(ggplot2)
 library(reshape2)
 library(patchwork)
-library(rlang)
 library(data.table)
 library(tidyverse)
 library(rstudioapi)
@@ -13,10 +12,10 @@ cur_dir = dirname(getSourceEditorContext()$path)
 setwd(cur_dir)
 getwd()
 
-source("supp/figure2C_supp.R")
+source("supp/supp.R")
 
 #ethanol phase enrichment
-pathways = read_excel('../results/phase/FELLA_pathways.xlsx', sheet = 'inverse_e')
+pathways = read_excel('../results/strain/FELLA_pathways.xlsx', sheet = 'inverse_e')
 long <- melt(pathways, id.vars = c("Pathway"))
 long$value[which(long$value < (1-0.01))] = 0
 x_axis = c('\U0394tda1','\U0394ygr067c','\U0394rme1',paste0('\U0394','dld3'),
