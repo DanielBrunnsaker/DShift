@@ -60,7 +60,7 @@ correlation_values = function(indices, models, strains_sims, phase, corr_values,
     for (model in models){
       print(strains)
       #load simulations
-      sim = read.csv(paste0('/Users/danbru/',model,'_',
+      sim = read.csv(paste0('../data/simulations/',model,'_',
                             strains,'.csv'),row.names = 1, header= TRUE) #first half is glucose, second ethanol
       sim = sim[,indices] #glucose indices
       if (model == 'M1'){
