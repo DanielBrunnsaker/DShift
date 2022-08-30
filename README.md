@@ -17,7 +17,19 @@ Simulations done to select the strains of interest was made using the framework 
 
 Analysis makes use of the output provided by MSDial (v4.7) as a basis for processing and analysis. The scripts should be ran in the following order:
 
-1. processing_step1.R
-2. processing_step2.R
-3. processing_step3.R
-4. processing_MAnalyst.R
+1. scripts/processing_step1.R (Reads MSDial output and performs signal drift correction and batch correction)
+2. scripts/processing_step2.R (Basic curation and data formatting)
+3. scripts/processing_step3.R (Merges MS-runs)
+4. scripts/processing_MAnalyst.R (Prepares data for downstream MetaboAnalyst analysis)
+
+## Analysis
+
+Basic analysis made using the MetaboAnalyst online-client (https://www.metaboanalyst.ca/)
+
+Analysis using FELLA and visualizations performed in the following scripts:
+
+1. scripts/figure1A.R (Heatmap of metabolite profiles)
+2. scripts/figure1BC_data.R (FELLA-based analysis of metaboanalyst output)
+3. scripts/figure1BC_plot.R (Visualization of enrichment)
+4. scripts/figure2C.R (FELLA-based analysis of the diauxic shift)
+5. scripts/figure4.R (Visualization of apearman correlation of simulations and statistically significant differences)
