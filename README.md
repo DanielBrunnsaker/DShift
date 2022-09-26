@@ -24,7 +24,7 @@ Analysis makes use of the output provided by MSDial (v4.7) as a basis for proces
 2. scripts/processing_step1.R (Reads cleaned output and performs signal drift correction and batch correction)
 3. scripts/processing_step2.R (Basic curation and data formatting)
 4. scripts/processing_step3.R (Merges MS-runs)
-5. scripts/processing_MAnalyst.R (Prepares data for downstream MetaboAnalyst analysis)
+5. scripts/processing_MAnalyst.R (Prepares data for downstream MetaboAnalyst analysis, outputs ft.csv (data file) and st.csv (metadata file) for the phase and strain analysis)
 
 ## Analysis
 
