@@ -1,3 +1,5 @@
+Species are defined by their retention time, m/z, main adduct and their allotted identification (RT_mz_adduct_name)
+
 #### Metaboanalyst/oplsda_vip.csv
 Feature importances derived cross-phase discrimination using oPLS-DA.
 
@@ -12,4 +14,3 @@ Statistics for all of the strains (WT vs. strain) in the ethanol phase.
 
 #### Strain/glucose/*.csv
 Statistics for all of the strains (WT vs. strain) in the glucose phase.
-
