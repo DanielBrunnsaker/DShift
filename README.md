@@ -14,7 +14,7 @@ Raw data in the form of mzML-files can be found at Zenodo: 10.5281/zenodo.710558
 
 ## FBA Simulations
 
-Simulations done to select the strains of interest was made using the framework supplied in Coutant et al. (https://doi.org/10.1073/pnas.1900548116). Output found in data/simulations.
+dFBA (dynamic flux balance analysis) simulations done to select the strains of interest was made using the framework supplied in Coutant et al. (https://doi.org/10.1073/pnas.1900548116). Output found in data/simulations.
 
 ## Data processing
 
