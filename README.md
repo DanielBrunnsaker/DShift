@@ -28,7 +28,7 @@ Analysis makes use of the output provided by MSDial (v4.7) as a basis for proces
 
 ## Analysis
 
-Basic analysis made using the MetaboAnalyst online-client (https://www.metaboanalyst.ca/)
+Basic analysis made using the MetaboAnalyst online-client (https://www.metaboanalyst.ca/) or the R-suite.
 
 Analysis using FELLA and visualizations performed in the following scripts:
 
