@@ -20,10 +20,10 @@ fella.data <- loadKEGGdata(databaseDir = tmpdir,internalDir = FALSE,loadMatrix =
 
 #### strains in ethanol phase, select the one if interest
 
-mdat = read.csv('../results/strain/ethanol/TDA1.csv')
+#mdat = read.csv('../results/strain/ethanol/TDA1.csv')
 #mdat = read.csv('../results/strain/ethanol/YGR067C.csv')
 #mdat = read.csv('../results/strain/ethanol/RME1.csv')
-#mdat = read.csv('../results/strain/ethanol/DLD3.csv')
+mdat = read.csv('../results/strain/ethanol/DLD3.csv')
 #mdat = read.csv('../results/strain/ethanol/GAL11.csv')
 #mdat = read.csv('../results/strain/ethanol/OCA1.csv')
 #mdat = read.csv('../results/strain/ethanol/FAA1.csv')
@@ -45,7 +45,7 @@ mdat = read.csv('../results/strain/ethanol/TDA1.csv')
 #mdat = read.csv('../results/strain/glucose/MEK1.csv')
 
 ####
-
+#Remove duplicates (keep the ones with the highest certainty of identification, e.g. MS2 spectra)
 to_remove = c('243.05', '132.10147','156.07756','160.0429',
               '160.04425','160.04459','136.06218','136.06087',
               '296.06558','376.1325','396.1585','250.17918')
@@ -64,6 +64,11 @@ tempdat = p_threshold (mdat, threshold)
 compounds.ds = tempdat$KEGG
 
 analysis.ds <- defineCompounds(compounds = compounds.ds,data = fella.data)
+
+
+
+
+
 analysis.ds <- runDiffusion(object = analysis.ds,data = fella.data,approx = "normality")
 
 nlimit <- 300
@@ -74,6 +79,10 @@ tab.all[tab.all$Entry.type == 'pathway',]
 
 
 
-
+table = mdat[c('KEGG','logFC','AveExpr','t','P.Value')]
+table = table[table$KEGG != 'No result',]
+table = na.omit(table)
+library(xlsx)
+write.xlsx(table, "/Volumes/Samsung_T5/DShift_repo/DShift/tables/RME1_E.xlsx", row.names = FALSE)
 
 

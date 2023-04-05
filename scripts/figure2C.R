@@ -22,6 +22,7 @@ fella.data <- loadKEGGdata(databaseDir = tmpdir,internalDir = FALSE,
                            loadMatrix = "diffusion")
 
 mdat = read.csv("../results/phase/phase.csv")
+#Remove duplicates (keep the ones with the highest certainty of identification, e.g. MS2 spectra)
 to_remove = c('243.05', '132.10147','156.07756','160.0429',
               '160.04425','160.04459','136.06218','136.06087',
               '296.06558','376.1325','396.1585','250.17918')
