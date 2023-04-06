@@ -16,16 +16,20 @@ source("supp/supp.R")
 strains = c('WildType','YEL071W','YGR044C','YGR067C','YGR161C','YMR291W',
             'YNL099C','YNL289W','YOL051W','YOR317W','YOR351C')
 
-ftq = read.csv('../data/metabolomics/intermediates/ft.csv', row.names = 1)ftq_norm = data.frame(t(normalize.quantiles(t(ftq)))) #preprocess now to save time laterrownames(ftq_norm) = rownames(ftq)colnames(ftq_norm) = colnames(ftq)
+ftq = read.csv('../data/metabolomics/intermediates/ft.csv', row.names = 1)
+ftq_norm = data.frame(t(normalize.quantiles(t(ftq)))) #preprocess now to save time later
+rownames(ftq_norm) = rownames(ftq)
+colnames(ftq_norm) = colnames(ftq)
 
 #load data
-ftq_g = ftq_norm[rownames(ftq_norm) %like% 'B1G|B2G|B3G|B4G|B5G|B6G|B7G',]ftq_e = ftq_norm[(rownames(ftq_norm) %like% 'B1E|B2E|B3E|B4E|B5E|B6E|B7E'),]
+ftq_g = ftq_norm[rownames(ftq_norm) %like% 'B1G|B2G|B3G|B4G|B5G|B6G|B7G',]
+ftq_e = ftq_norm[(rownames(ftq_norm) %like% 'B1E|B2E|B3E|B4E|B5E|B6E|B7E'),]
 
 to_remove = c('243.05', '132.10147','156.07756','160.0429',
               '160.04425','160.04459','136.06218','136.06087',
               '296.06558','376.13256','396.1585','250.17918')
 
-#filter out unwanted duplicates
+#filter out unwanted duplicates (prioritizing certainty of identification)
 ftq_e = remove_unwanted_features_ftq(ftq_e, to_remove)
 ftq_g = remove_unwanted_features_ftq(ftq_g, to_remove)
 
@@ -66,7 +70,9 @@ filtData = filtData[filtData$V1 > 1.131,] #top 100
 #merge with data
 filtData = drop_na(filtData)
 
-#keep the first X letters of each, as there seems to be a rounding issue in a previous script.filtData$X <- substr(filtData$X, 0, 14)colnames(df) <- substr(colnames(df), 0, 14)
+#keep the first X letters of each, as there seems to be a rounding issue in a previous script.
+filtData$X <- substr(filtData$X, 0, 14)
+colnames(df) <- substr(colnames(df), 0, 14)
 
 df_heatmap = df
 matching_indices = data.frame(match(colnames(df_heatmap),filtData$X))
