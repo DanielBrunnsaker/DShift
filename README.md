@@ -11,7 +11,7 @@ Connected paper can be found at: https://www.nature.com/articles/s41540-023-0027
 
 ## Project information
 
-![Figure1](main_fig.pdf)
+![Figure1](main_fig.png)
 
 Semi-automated batch cultivations of the yeast *S. cerevisiae* (Strain background: BY4741, Genotype: MATa his3&#916;1 leu2&#916;0 met15&#916;0 ura3&#916;0) and 10 single deletion mutants (&#916;ygr067c, &#916;tda1, &#916;rme1, &#916;rts3, &#916;pcl1, &#916;oca1, &#916;gal11, &#916;dld3, &#916;mek1, &#916;faa1) sampled in the fermentative phase and respiratory phase respectively. Untargeted LC-MS metabolomics was done on the processed samples and subsequently analyzed in order to gain increased understanding of the diauxic shift and the functionality of its regulators. 
 
