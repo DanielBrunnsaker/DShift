@@ -1,7 +1,9 @@
 # DiauxicShift
 
 Untargeted metabolomics for functional discovery of regulatory genes in the context of the diauxic shift.
-This repository contains code and intermediate data to be able to recreate the work if needed. Supplementary data can be found in /data and /results. Raw data can be found at https://doi.org/10.5281/zenodo.7105589.
+This repository contains code and intermediate data to be able to recreate the work if needed. Supplementary data can be found in /data and /results. Raw data can be found at https://doi.org/10.5281/zenodo.7105589. 
+
+Fully annotated peak tables can be found at data/metabolomics/Metabolomics_B1 and data/metabolomics/Metabolomics_B2.
 
 Last update: 2023-04-17
 
