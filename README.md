@@ -44,4 +44,4 @@ Analysis using FELLA and visualizations performed in the following scripts:
 
 ## Citation
 
-If you make use the data involved in this project, we would appreciate a citation of the original [paper](https://www.nature.com/articles/s41540-023-00274-9).
+If you make use the data involved in this project, we would appreciate a citation of the [original paper](https://www.nature.com/articles/s41540-023-00274-9).
