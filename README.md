@@ -45,7 +45,6 @@ Analysis using FELLA and visualizations performed in the following scripts:
 5. scripts/figure2C.R (FELLA-based analysis of the diauxic shift)
 6. scripts/figure4.R (Visualization of spearman correlation of simulations and statistically significant differences)
 
-
 ## Citation
 
 If you make use the data involved in this project, we would appreciate a citation of the [original paper](https://www.nature.com/articles/s41540-023-00274-9).
